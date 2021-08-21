@@ -1,0 +1,16 @@
+h1{
+    font-family: cursive;
+    text-align: center;
+    color:#0066b2;
+}
+
+.userDetails{
+    margin: -2rem 30rem 35rem ;
+    padding:  1rem;
+    cursor: pointer;
+    text-align: left;
+    
+}
+.userDetails button{
+    background-color: skyblue;
+}
