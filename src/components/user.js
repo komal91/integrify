@@ -5,23 +5,20 @@ import './user.css';
 
 const User = props => {
     var id = props.match.params.id
-
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [user, setUser] = useState([]);
-    //const [username, setUserusername] = useState([]);
     const [userAddress, setUserAddress] = useState([]);
     const [userCompany, setUserCompany] = useState([]);
-
+    
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/users/" + id)
             .then(res => res.json())
             .then(
                 (data) => {
                     console.log(data);
-                    setUser(data);
-                  //  setUserusername(data.username);
                     setIsLoaded(true);
+                    setUser(data);
                     setUserAddress(data.address);
                     setUserCompany(data.company);
                 },
@@ -30,13 +27,13 @@ const User = props => {
                     setError(error);
                 }
             )
-    }, [])
+    }, )
     if (error) {
         return <div>Error: {error.message}</div>;
     }
     if (!isLoaded) {
         return <div>Loading...</div>;
-    }
+    }  
 
     if (user) {
         return (
