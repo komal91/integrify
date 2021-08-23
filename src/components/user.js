@@ -27,7 +27,7 @@ const User = props => {
                     setError(error);
                 }
             )
-    }, )
+    }, [id])
     if (error) {
         return <div>Error: {error.message}</div>;
     }
