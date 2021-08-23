@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import { CardGroup, Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Home from './home';
 import './user.css';
 
 const User = props => {
@@ -9,7 +10,7 @@ const User = props => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [user, setUser] = useState([]);
-  //  const [username, setUserusername] = useState([]);
+    const [username, setUserusername] = useState([]);
     const [userAddress, setUserAddress] = useState([]);
     const [userCompany, setUserCompany] = useState([]);
 
